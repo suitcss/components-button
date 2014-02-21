@@ -16,9 +16,9 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * `Button` - [core] The core button component
 * `is-disabled` - [state] For disabled-state button styles (themes)
 
-N.B. You must also include the `disabled` attribute on `button` and `input`
-elements. For `a` elements, you should remove the `href` attribute and prevent
-JavaScript event handlers from firing.
+N.B. You must also include the `disabled` attribute on `button` elements. For
+`a` elements, you should remove the `href` attribute and prevent JavaScript
+event handlers from firing.
 
 ## Configurable variables
 
@@ -38,8 +38,6 @@ extended by any number of additional modifier and state classes.
 <a class="Button" href="{{url}}">Sign up</a>
 
 <button class="Button Button--default is-disabled" type="button">Close</button>
-
-<input class="Button Button--primary is-pressed" type="submit" value="Submit">
 ```
 
 ### Theming / extending
