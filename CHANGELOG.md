@@ -1,5 +1,15 @@
 === HEAD
 
+=== 3.3.0 (June 22, 2014)
+
+* npm-based workflow.
+* Add new preprocessor build tools.
+* Fix Firefox/IE default `button` focus styles.
+
+=== 3.2.0 (May 15, 2014)
+
+* Update variables syntax.
+
 === 3.1.0 (April 1, 2014)
 
 * Add npm support.
