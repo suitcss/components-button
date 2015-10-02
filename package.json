@@ -15,8 +15,7 @@
     "postcss-custom-media": "^5.0.0",
     "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-components-test": "*"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
