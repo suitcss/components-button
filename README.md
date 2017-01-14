@@ -1,5 +1,7 @@
 # SUIT CSS components-button
 
+[![Build Status](https://travis-ci.org/suitcss/components-button.svg?branch=master)](https://travis-ci.org/suitcss/components-button)
+
 A SUIT CSS component that provides a structural UI button template to be
 extended with modifiers.
 
@@ -8,15 +10,15 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-components-button`
+* Download: [zip](https://github.com/suitcss/components-button/releases/latest)
 
 ## Available classes
 
 * `Button` - [core] The core button component
 * `is-disabled` - [state] For disabled-state button styles (themes)
 
-N.B. You must also include the `disabled` attribute on `button` and `input`
-elements. For `a` elements, you should remove the `href` attribute and prevent
-JavaScript event handlers from firing.
+N.B. You must also include the `disabled` attribute on `button` elements. For
+`a` elements, you should prevent JavaScript event handlers from firing.
 
 ## Configurable variables
 
@@ -35,8 +37,6 @@ Examples:
 <a class="Button" href="{{url}}">Sign up</a>
 
 <button class="Button Button--default is-disabled" type="button">Close</button>
-
-<input class="Button Button--primary is-pressed" type="submit" value="Submit">
 ```
 
 ### Theming / extending
@@ -103,10 +103,22 @@ To generate a build:
 npm run build
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To generate the testing build.
 
 ```
 npm run build-test
+```
+
+To watch the files for making changes to test:
+
+```
+npm run watch
 ```
 
 Basic visual tests are in `test/index.html`.
@@ -117,4 +129,4 @@ Basic visual tests are in `test/index.html`.
 * Firefox
 * Opera
 * Safari
-* Internet Explorer 8+
+* Internet Explorer 9+
