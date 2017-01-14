@@ -1,4 +1,4 @@
-/** @define Test; use strict */
+/** @define Test */
 
 /**
  * The 'describe' CSS counter
@@ -8,7 +8,7 @@
   counter-reset: test-describe;
 }
 
-.Test-describe:before {
+.Test-describe::before {
   content: counter(test-describe);
   counter-increment: test-describe;
 }
@@ -21,7 +21,7 @@
   counter-reset: test-it;
 }
 
-.Test-it:before {
+.Test-it::before {
   content: counter(test-describe) "." counter(test-it);
   counter-increment: test-it;
 }
@@ -31,12 +31,12 @@
  */
 
 .Test-title {
-  font-size: 2em;
-  font-family: sans-serif;
-  padding: 20px;
-  margin: 20px 0;
   background: #eee;
   color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 /**
@@ -63,8 +63,8 @@
  * The counter styles
  */
 
-.Test-describe:before,
-.Test-it:before {
+.Test-describe::before,
+.Test-it::before {
   color: #999;
   display: inline-block;
   margin-right: 10px;
@@ -72,56 +72,40 @@
   text-transform: uppercase;
 }
 
-/** @define Button; use strict */
-
-
+/** @define Button */
 
 /**
- * The button classes are best applied to links, buttons, and submit inputs.
+ * The button classes are best applied to links and buttons.
  * These components can be used in forms, as calls to action, or as part of the
  * general UI of the site/app.
  */
 
 /**
- * 1. Corrects inability to style clickable `input` types in iOS.
- * 2. Normalize `box-sizing` across all elements that this component could be
+ * 1. Normalize `box-sizing` across all elements that this component could be
  *    applied to.
- * 3. Inherit text color from ancestor.
- * 4. Inherit font styles from ancestor.
- * 5. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
- * 6. Prevent button text from being selectable.
- * 7. Make sure `input` will wrap text across multiple lines.
+ * 2. Inherit text color from ancestor.
+ * 3. Inherit font styles from ancestor.
+ * 4. Prevent button text from being selectable.
  */
 
 .Button {
-  -webkit-appearance: none;
-  /* 1 */
   background: transparent;
   border-color: currentcolor;
   border-style: solid;
   border-width: 1px;
-  box-sizing: border-box;
-  /* 2 */
-  color: inherit;
-  /* 3 */
-  cursor: pointer;
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
   display: inline-block;
-  font: inherit;
-  /* 4 */
-  line-height: normal;
-  /* 5 */
+  font: inherit; /* 3 */
   margin: 0;
   padding: 0.4em 0.75em;
   position: relative;
   text-align: center;
   text-decoration: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* 6 */
-  white-space: normal;
-  /* 7 */
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; /* 4 */
 }
 
 /**
@@ -158,3 +142,4 @@
   cursor: default;
   opacity: 0.6;
 }
+
