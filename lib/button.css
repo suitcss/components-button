@@ -7,6 +7,7 @@
   --Button-disabled-opacity: 0.6;
   --Button-font: inherit;
   --Button-padding: 0.4em 0.75em;
+  --Button-radius: 10px;
 }
 
 /**
